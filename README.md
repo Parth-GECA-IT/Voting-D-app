@@ -2,7 +2,7 @@
 ## E-Voting D-app using Blockchain ⚙️<br><br><br>
 
 *Authors :* <br>
-**Parth Armarkar**
-**Karan Gawande**
-**Mihir Mudholkar**
-**Prakhar Singh**
+**Parth Armarkar**<br>
+**Karan Gawande**<br>
+**Mihir Mudholkar**<br>
+**Prakhar Singh**<br>
