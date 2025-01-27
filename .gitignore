@@ -30,6 +30,11 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+/app/candidate-details/page.js
+/app/voter-details/page.js
+/public/favicon.png
+/public/favicon.ico
+
 # env files (can opt-in for committing if needed)
 .env*
 
