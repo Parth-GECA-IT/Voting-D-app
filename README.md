@@ -32,15 +32,17 @@ A secure, transparent, and tamper-proof voting platform built on blockchain tech
 ## 📂 Project Structure
 
 ```
-├── contracts          # Solidity smart contracts
-├── pages              # Next.js pages for routing
-├── Components         # React components for the UI
-├── public             # Static assets (e.g., favicon)
-├── scripts            # Deployment scripts for smart contracts
-├── styles             # CSS and styling files
-├── utils/context      # Utility functions and React context
-├── hardhat.config.js  # Hardhat configuration file
-├── package.json       # Dependencies and project scripts
+├── app                # Next.js app directory (App Router)
+│   ├── components    # React components
+│   ├── layout.js     # Root layout
+│   └── page.js       # Home page
+├── contracts         # Solidity smart contracts
+├── public            # Static assets (e.g., favicon)
+├── scripts          # Deployment scripts for smart contracts
+├── styles           # CSS and styling files
+├── utils/context    # Utility functions and React context
+├── hardhat.config.js # Hardhat configuration file
+└── package.json     # Dependencies and project scripts
 ```
 
 ---
@@ -112,11 +114,17 @@ Get PInata API key from [here](https://pinata.cloud/)
    npx hardhat compile
    ```
 
-3. **Deploy Contracts Locally**:
-   ```bash
-   npx hardhat node
-   npx hardhat run scripts/deploy.js --network localhost
-   ```
+3. **Deploy Contracts**:
+   - For local development:
+     ```bash
+     npx hardhat node
+     npx hardhat run scripts/deploy.js --network localhost
+     ```
+   - For Polygon Amoy testnet deployment:
+     ```bash
+     npx hardhat run scripts/deploy.js --network polygon_amoy
+     ```
+   Note: Use `localhost` for testing and development purposes. Use `polygon_amoy` when you want to deploy to the Polygon Amoy testnet for staging or production.
 
 4. **Run the Development Server**:
    ```bash
