@@ -32,17 +32,17 @@ A secure, transparent, and tamper-proof voting platform built on blockchain tech
 ## 📂 Project Structure
 
 ```
-├── app                # Next.js app directory (App Router)
-│   ├── components    # React components
+├── app               # Next.js app directory (App Router)
 │   ├── layout.js     # Root layout
 │   └── page.js       # Home page
+├── components        # React components
 ├── contracts         # Solidity smart contracts
 ├── public            # Static assets (e.g., favicon)
-├── scripts          # Deployment scripts for smart contracts
-├── styles           # CSS and styling files
-├── utils/context    # Utility functions and React context
+├── scripts           # Deployment scripts for smart contracts
+├── styles            # CSS and styling files
+├── utils/context     # Utility functions and React context
 ├── hardhat.config.js # Hardhat configuration file
-└── package.json     # Dependencies and project scripts
+└── package.json      # Dependencies and project scripts
 ```
 
 ---
