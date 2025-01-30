@@ -1,6 +1,6 @@
 import React from "react";
 
-const HeroSection = ({ initialData, higest }) => {
+const HeroSection = ({ initialData, highest }) => {
   return (
     <section className="hero-section position-relative z-0 ">
       <div className="animation position-absolute top-0 left-0 w-100 h-100 z-n1">
@@ -53,13 +53,13 @@ const HeroSection = ({ initialData, higest }) => {
                   >
                     All Candidates <i className="ti ti-trending-up"></i>
                   </a>
-                  {higest ? (
+                  {highest ? (
                     <a
-                      href={`/candidate-details?address=${higest?.address}`}
+                      href={`/candidate-details/${highest?.address}`}
                       className="cmn-btn link link-xxl-color fs-five  gap-2 gap-lg-3 align-items-center "
                     >
                       <i className="ti ti-arrow-narrow-right fs-four"></i>
-                      Current Higest Voter
+                      Current Highest Voter
                     </a>
                   ) : (
                     <a

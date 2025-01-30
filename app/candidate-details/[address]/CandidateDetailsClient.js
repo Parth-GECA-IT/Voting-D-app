@@ -1,20 +1,32 @@
 // app/candidate/[address]/CandidateDetailsClient.js
-'use client'
+'use client';
 
-import { useEffect, useState, useContext } from 'react';
-import { TeamDetail } from '@/Components';
-import Loader from '@/components/Global/Loader';
-import { VOTING_DAPP_CONTEXT } from '@/context/context';
+import { useEffect, useState, useContext } from "react";
+import {
+  Cursor,
+  Preloader,
+  ScrollToTop,
+  Footer,
+  Header,
+  TeamDetail,
+} from "@/Components"; // Update import path
+import Loader from "@/components/Global/Loader";
+import { VOTING_DAPP_CONTEXT } from "@/context/context";
 
-export default function CandidateDetailsClient({ address: candidateAddress }) {
+export function CandidateDetailsClient({ initialData, address: candidateAddress }) {
   const [candidate, setCandidate] = useState();
   const [user, setUser] = useState();
   const [votingTime, setVotingTime] = useState();
   const [currentVotingTime, setCurrentVotingTime] = useState();
 
   const {
+    notifySuccess,
+    notifyError,
+    setLoader,
     loader,
     address,
+    VOTING_DAPP,
+    checkIfWalletIsConnected,
     GET_SINGLE_CANDIDATE,
     APPROVE_CANDIDATE,
     GIVE_VOTE,
@@ -24,35 +36,27 @@ export default function CandidateDetailsClient({ address: candidateAddress }) {
     REJECT_CANDIDATE,
     GET_SINGLE_VOTER,
     INITIAL_CONTRACT_DATA,
-    checkIfWalletIsConnected
   } = useContext(VOTING_DAPP_CONTEXT);
 
   useEffect(() => {
     const fetchData = async () => {
-      try {
-        // Get candidate details
-        const candidateData = await GET_SINGLE_CANDIDATE(candidateAddress);
-        setCandidate(candidateData);
+      const items = await GET_SINGLE_CANDIDATE(candidateAddress);
+      setCandidate(items);
 
-        // Get all voted voters
-        await ALL_VOTERS_VOTED();
+      const allVotedVoter = await ALL_VOTERS_VOTED();
+      
+      const votingStatus = await INITIAL_CONTRACT_DATA();
+      setVotingTime(votingStatus);
 
-        // Get voting status
-        const votingStatus = await INITIAL_CONTRACT_DATA();
-        setVotingTime(votingStatus);
+      const nowInMilliseconds = Date.now();
+      const nowInSeconds = Math.floor(nowInMilliseconds / 1000);
+      setCurrentVotingTime(nowInSeconds);
 
-        // Set current time
-        const nowInSeconds = Math.floor(Date.now() / 1000);
-        setCurrentVotingTime(nowInSeconds);
+      const walletAddress = await checkIfWalletIsConnected();
 
-        // Get user details if wallet is connected
-        const userAddress = await checkIfWalletIsConnected();
-        if (userAddress) {
-          const userData = await GET_SINGLE_VOTER(userAddress);
-          setUser(userData);
-        }
-      } catch (error) {
-        console.error('Error fetching data:', error);
+      if (walletAddress) {
+        const userData = await GET_SINGLE_VOTER(walletAddress);
+        setUser(userData);
       }
     };
 
@@ -69,6 +73,10 @@ export default function CandidateDetailsClient({ address: candidateAddress }) {
 
   return (
     <>
+      <Preloader />
+      <ScrollToTop />
+      <Cursor />
+      <Header />
       <TeamDetail
         candidate={candidate}
         path={"candidate"}
@@ -83,6 +91,7 @@ export default function CandidateDetailsClient({ address: candidateAddress }) {
         currentVotingTime={currentVotingTime}
       />
       {loader && <Loader />}
+      <Footer />
     </>
   );
 }
