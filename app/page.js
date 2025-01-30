@@ -23,7 +23,7 @@ import { VOTING_DAPP_CONTEXT } from "../context/context";
 export default function Home() {
 
   const [initialData, setInitialData] = useState();
-  const [higest, setHigest] = useState();
+  const [highest, setHighest] = useState();
 
   const {
     connectWallet,
@@ -39,7 +39,7 @@ export default function Home() {
       const items = await HIGHEST_VOTED_CANDIDATE();
       const initialData = await INITIAL_CONTRACT_DATA();
 
-      setHigest(items);
+      setHighest(items);
       setInitialData(initialData);
       console.log(items);
       console.log(initialData);
@@ -54,7 +54,7 @@ export default function Home() {
       <ScrollToTop />
       <Cursor />
       <Header />
-      <HeroSection initialData={initialData} higest={higest} />
+      <HeroSection initialData={initialData} highest={highest} />
       <WhyVote />
       <Provide />
       <Vote />

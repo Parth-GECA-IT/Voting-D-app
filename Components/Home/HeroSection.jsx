@@ -56,6 +56,7 @@ const HeroSection = ({ initialData, highest }) => {
                   {highest ? (
                     <a
                       href={`/candidate-details/${highest?.address}`}
+                      // href={`/candidate-details?address=${highest?.address}`}
                       className="cmn-btn link link-xxl-color fs-five  gap-2 gap-lg-3 align-items-center "
                     >
                       <i className="ti ti-arrow-narrow-right fs-four"></i>
