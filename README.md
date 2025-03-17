@@ -32,10 +32,10 @@ A secure, transparent, and tamper-proof voting platform built on blockchain tech
 ## 📂 Project Structure
 
 ```
-├── app               # Next.js app directory (App Router)
+├── app               # Next.js app directory
 │   ├── layout.js     # Root layout
 │   └── page.js       # Home page
-├── components        # React components
+├── Components        # React components
 ├── contracts         # Solidity smart contracts
 ├── public            # Static assets (e.g., favicon)
 ├── scripts           # Deployment scripts for smart contracts
@@ -74,7 +74,7 @@ Get PInata API key from [here](https://pinata.cloud/)
 
 ```https://www.pinata.cloud/
  GET: API_KEY
- GET:  SECRECT_KEY
+ GET: SECRECT_KEY
 ```
 
 **PInata IPFS IMAGE UPLOAD**
