@@ -34,6 +34,8 @@ yarn-error.log*
 /app/voter-details/page.js
 /public/favicon.png
 /public/favicon.ico
+/app/indexes.js
+/README_starter_file.md
 
 # env files (can opt-in for committing if needed)
 .env*
