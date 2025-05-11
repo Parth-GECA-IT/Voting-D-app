@@ -42,12 +42,12 @@ const Member = ({
                       {item?.status == 0
                         ? "Pending"
                         : item?.status == 1
-                        ? "Approve"
+                        ? "Approved"
                         : "Rejected"}
                     </strong>
                   </p>
                   <p className="mb-3">
-                    When I first started trading But with time and experience.
+                    When I first started social activities. But with time and experience.
                   </p>
                   {path == "candidate" &&
                     item?.status == 1 &&

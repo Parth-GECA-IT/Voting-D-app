@@ -6,6 +6,7 @@ import Link from "./Link";
 
 //IMPORTING CONTRCT DATA
 import { VOTING_DAPP_CONTEXT } from "../../../context/context";
+import { usePathname } from "next/navigation";
 const Header = () => {
   const { connectWallet, address, setAddress, OWNER_ADDRESS } =
     useContext(VOTING_DAPP_CONTEXT);
@@ -14,6 +15,8 @@ const Header = () => {
     const userAddress = await connectWallet();
     setAddress(userAddress);
   };
+
+  const location = usePathname();
 
   return (
     <header className="header-section a2-bg-0 header-section--secondary header-menu w-100">
@@ -99,7 +102,7 @@ const Header = () => {
           >
             <ul className="navbar-nav gap-2 gap-lg-3 gap-xxl-8  align-self-center mx-auto mt-4 mt-lg-0">
               <li className="dropdown show-dropdown">
-                <a href="/" className=" dropdown-nav active">
+                <a href="/" className={`dropdown-nav ${location == '/' ? 'active' : 'text-white'}`}>
                   home
                 </a>
               </li>
@@ -107,7 +110,7 @@ const Header = () => {
                 <button
                   type="button"
                   aria-label="Navbar Dropdown Button"
-                  className=" dropdown-nav"
+                  className={`dropdown-nav ${location == '/register-candidate' ? 'active' : 'text-white' }`}
                 >
                   Candidate
                 </button>
@@ -128,7 +131,7 @@ const Header = () => {
                 <button
                   type="button"
                   aria-label="Navbar Dropdown Button"
-                  className=" dropdown-nav"
+                  className={`dropdown-nav ${location == '/register-voter' ? 'active' : 'text-white' }`}
                 >
                   Voter
                 </button>

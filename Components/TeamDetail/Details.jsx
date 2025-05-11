@@ -32,13 +32,13 @@ const Details = ({
                 <img
                   src={candidate?.image}
                   alt="Image"
-                  className="cus-rounded-1 max-auto max-lg-un"
+                  className="cus-rounded-1 max-auto max-lg-un w-100"
                 />
               </div>
               <div className="team__content pe-md-4">
                 <h5 className="team__title mb-4">{candidate?._name}</h5>
                 <p className="mb-4">
-                  Hey there! So glad you stopped by to Meet Our Company. Don't
+                  Hey there! So glad you stopped by to Meet Our Team. Don't
                   miss out on this opportunity to learn about what we do and the
                   amazing team that makes it all happen!
                 </p>

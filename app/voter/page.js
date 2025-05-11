@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState, useContext } from "react";
+import Link from "next/link";
 
 import {
   Cursor,
@@ -98,10 +99,10 @@ const voter = () => {
             <div class="col-12 col-md-6 col-lg-5 col-xxl-5 offset-xxl-1 text-center ms-xl-auto mx-auto">
               <div class="sign__content ms-md-5 ms-xxl-0 pt-120 pb-120">
                 <div class="head_part">
-                  <a href="/">
+                  <Link href="/">
                     {" "}
                     <img src="/Logo.png" style={{ width: '4em' }} alt="Logo" />
-                  </a>
+                  </Link>
                   <h5 class="mt-5 mt-lg-6">Register as a voter </h5>
                 </div>
 
@@ -271,7 +272,7 @@ const voter = () => {
 
                 <div class="mt-8 mt-lg-10">
                   <p>
-                    Don’t have an account? <a href="/">Register Here</a>
+                    Don't have an account? <Link href="/">Register Here</Link>
                   </p>
                 </div>
               </div>
