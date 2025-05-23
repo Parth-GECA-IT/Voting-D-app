@@ -61,38 +61,38 @@ const voter = () => {
       <ScrollToTop />
       <Cursor />
 
-      <section class="sign nb4-bg h-100 d-flex align-items-center position-relative z-0">
-        <div class="animation position-absolute top-0 left-0 w-100 h-100 z-n1">
+      <section className="sign nb4-bg h-100 d-flex align-items-center position-relative z-0">
+        <div className="animation position-absolute top-0 left-0 w-100 h-100 z-n1">
           <img
             src="assets/images/star.png"
             alt="vector"
-            class="position-absolute push_animat"
+            className="position-absolute push_animat"
           />
         </div>
-        <div class="container ">
-          <div class="row align-items-center justify-content-center justify-content-xl-start">
-            <div class="col-12 col-sm-10 col-md-6">
-              <div class="welcome alt-color text-center text-md-start pt-120 pb-120 position-relative z-0">
-                <h1 class="display-one">Welcome Back Admin!</h1>
+        <div className="container ">
+          <div className="row align-items-center justify-content-center justify-content-xl-start">
+            <div className="col-12 col-sm-10 col-md-6">
+              <div className="welcome alt-color text-center text-md-start pt-120 pb-120 position-relative z-0">
+                <h1 className="display-one">Welcome Back Admin!</h1>
               </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-5 col-xxl-5 offset-xxl-1 text-center ms-xl-auto mx-auto">
-              <div class="sign__content ms-md-5 ms-xxl-0 pt-120 pb-120">
-                <div class="head_part">
+            <div className="col-12 col-md-6 col-lg-5 col-xxl-5 offset-xxl-1 text-center ms-xl-auto mx-auto">
+              <div className="sign__content ms-md-5 ms-xxl-0 pt-120 pb-120">
+                <div className="head_part">
                   <a href="/">
                     {" "}
                     <img src="/Logo.png" style={{ width: '4rem' }} alt="Logo" />
                   </a>
-                  <h5 class="mt-5 mt-lg-6">Import Contract Functions </h5>
+                  <h5 className="mt-5 mt-lg-6">Import Contract Functions </h5>
                 </div>
 
                 {currentAddress == OWNER_ADDRESS.toLowerCase() && (
                   <div
                     autoComplete="off"
                     id="frmContactus"
-                    class="contact__form mt-8 mt-lg-10 text-start"
+                    className="contact__form mt-8 mt-lg-10 text-start"
                   >
-                    <div class="d-flex flex-column gap-5 gap-lg-6 ">
+                    <div className="d-flex flex-column gap-5 gap-lg-6 ">
                       <Input
                         name={"Start Time"}
                         placeholder={"startTime"}
@@ -115,9 +115,9 @@ const voter = () => {
                           })
                         }
                       />
-                      <div class="  mt-lg-8">
+                      <div className="  mt-lg-8">
                         <button
-                          class="cmn-btn py-3 px-5 px-lg-6 mt-7 mt-lg-8 w-100 d-center"
+                          className="cmn-btn py-3 px-5 px-lg-6 mt-7 mt-lg-8 w-100 d-center"
                           onClick={() => SET_VOTING_PREIOD(voteTime)}
                         >
                           Set Voting Period
@@ -129,9 +129,9 @@ const voter = () => {
                         type={"text"}
                         handleClick={(e) => setChangeOwner(e.target.value)}
                       />
-                      <div class="  mt-lg-8">
+                      <div className="  mt-lg-8">
                         <button
-                          class="cmn-btn py-3 px-5 px-lg-6 mt-7 mt-lg-8 w-100 d-center"
+                          className="cmn-btn py-3 px-5 px-lg-6 mt-7 mt-lg-8 w-100 d-center"
                           onClick={() => CHANGE_OWNER(changeOwner)}
                         >
                           Change Owner
@@ -139,9 +139,9 @@ const voter = () => {
                       </div>
                     </div>
 
-                    <div class=" mt-7 mt-lg-8">
+                    <div className=" mt-7 mt-lg-8">
                       <button
-                        class="cmn-btn py-3 px-5 px-lg-6 mt-7 mt-lg-8 w-100 d-center"
+                        className="cmn-btn py-3 px-5 px-lg-6 mt-7 mt-lg-8 w-100 d-center"
                         onClick={() => RESET_CONTRACT()}
                       >
                         Reset Contract

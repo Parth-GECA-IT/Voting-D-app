@@ -1,4 +1,4 @@
-'use client'; // Required for client-side hooks and interactivity
+'use client';
 
 import { useEffect, useState, useContext } from "react";
 import { useParams } from "next/navigation";

@@ -49,7 +49,7 @@ const UploadImg = ({ setLoader, notifySuccess, notifyError, setImage }) => {
   return (
     <div {...getRootProps()} className="messageBox">
       <div className="fileUploadWrapper">
-        <label for="file">
+        <label htmlFor="file">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"

@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 
 const Footer = () => {
@@ -19,12 +20,12 @@ const Footer = () => {
         <div className="start-earning nb3-bg cus-rounded-2 d-flex align-items-center p-4 p-sm-6 p-md-10 p-lg-15 p-xl-20 pe-lg-6 pe-xl-16 overflow-hidden position-relative">
           <div className="vector_effect position-absolute d-center justify-content-end end-0  d-flex gap-20">
             <img
-              src="assets/images/star2.png"
+              src="/assets/images/star2.png"
               alt="vector"
               className="d-none d-xxl-flex push_animat"
             />
             <img
-              src="assets/images/star_focus.png"
+              src="/assets/images/star_focus.png"
               alt="vector"
               className="d-none d-sm-flex rotate time_dur ms-auto ms-lg-0 me-md-5"
             />

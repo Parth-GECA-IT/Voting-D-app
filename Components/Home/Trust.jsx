@@ -100,7 +100,7 @@ const Trust = () => {
                             <div className="counter-part">
                               <div className="counters d-flex">
                                 <span
-                                  className="odometer display-four s1-color"
+                                  className="display-four s1-color odometer odometer-auto-theme"
                                   data-odometer-final="1"
                                 >
                                   0
@@ -114,7 +114,7 @@ const Trust = () => {
                             <div className="counter-part">
                               <div className="counters d-flex">
                                 <span
-                                  className="odometer display-four s1-color"
+                                  className="display-four s1-color odometer odometer-auto-theme"
                                   data-odometer-final="10"
                                 >
                                   0
@@ -158,7 +158,7 @@ const Trust = () => {
                             <div className="counter-part">
                               <div className="counters d-flex">
                                 <span
-                                  className="odometer display-four s1-color"
+                                  className="display-four s1-color odometer odometer-auto-theme"
                                   data-odometer-final="1"
                                 >
                                   0
@@ -172,7 +172,7 @@ const Trust = () => {
                             <div className="counter-part">
                               <div className="counters d-flex">
                                 <span
-                                  className="odometer display-four s1-color"
+                                  className="display-four s1-color odometer odometer-auto-theme"
                                   data-odometer-final="10"
                                 >
                                   0
@@ -250,7 +250,7 @@ const Trust = () => {
                             <div className="counter-part">
                               <div className="counters d-flex">
                                 <span
-                                  className="odometer display-four s1-color"
+                                  className="display-four s1-color odometer odometer-auto-theme"
                                   data-odometer-final="1"
                                 >
                                   0
@@ -264,7 +264,7 @@ const Trust = () => {
                             <div className="counter-part">
                               <div className="counters d-flex">
                                 <span
-                                  className="odometer display-four s1-color"
+                                  className="display-four s1-color odometer odometer-auto-theme"
                                   data-odometer-final="10"
                                 >
                                   0
