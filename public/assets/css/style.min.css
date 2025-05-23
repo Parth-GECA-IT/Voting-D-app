@@ -1473,13 +1473,15 @@ select {
 .mouse-follower .cursor-outline {
   height: 30px;
   width: 30px;
-  border: 1px solid rgba(var(--s1), 1);
+  /* border: 1px solid rgba(var(--s1), 1); */
+  border: 1px solid rgb(28, 170, 222);
 }
 
 .mouse-follower .cursor-dot {
   height: 6px;
   width: 6px;
-  background: rgba(var(--s1), 1);
+  /* background: rgba(var(--s1), 1); */
+  background: rgb(28, 170, 222);
 }
 
 .mouse-follower.hide-cursor span {

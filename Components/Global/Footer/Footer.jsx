@@ -58,21 +58,21 @@ const Footer = () => {
                     href="market.html"
                   >
                     {" "}
-                    markets
+                    Markets
                   </a>
                 </li>
                 <li>
-                  <a className="n2-color" href="#">
+                  <a className="n2-color" href="/roadmap">
                     Education
                   </a>
                 </li>
                 <li>
-                  <a className="n2-color" href="#">
+                  <a className="n2-color" href="/support">
                     Support
                   </a>
                 </li>
                 <li>
-                  <a className="n2-color" href="#">
+                  <a className="n2-color" href="/legal-docs">
                     Legal docs
                   </a>
                 </li>
@@ -84,7 +84,7 @@ const Footer = () => {
               <h4 className="mb-6 mb-lg-8">Company</h4>
               <ul className="footer_list d-flex flex-column gap-2 gap-sm-3 gap-md-4">
                 <li>
-                  <a className="n2-color" href="#">
+                  <a className="n2-color" href="/about">
                     About
                   </a>
                 </li>
@@ -106,17 +106,17 @@ const Footer = () => {
               <h4 className="mb-6 mb-lg-8">Legal</h4>
               <ul className="footer_list d-flex flex-column gap-2 gap-sm-3 gap-md-4">
                 <li>
-                  <a className="n2-color" href="#">
+                  <a className="n2-color" href="/terms-conditions">
                     Terms & Conditions
                   </a>
                 </li>
                 <li>
-                  <a className="n2-color" href="#">
+                  <a className="n2-color" href="/privacy-policy">
                     Privacy & Policy
                   </a>
                 </li>
                 <li>
-                  <a className="n2-color" href="contact.html">
+                  <a className="n2-color" href="/contact">
                     Contact
                   </a>
                 </li>
@@ -127,7 +127,7 @@ const Footer = () => {
             <div className="footer__part">
               <h4 className="mb-6 mb-lg-8">Contact Us</h4>
               <div className="d-flex flex-column gap-2 gap-sm-3 gap-md-4">
-                <a href="#">
+                <a href="/contact">
                   <span className="__cf_email__">abc@geca.ac.in</span>
                 </a>
                 <a href="tel:+123456789">+0123 456 789</a>
